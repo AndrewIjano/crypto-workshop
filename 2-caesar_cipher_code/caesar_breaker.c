@@ -28,7 +28,7 @@ char *decode(int shift, char *msg)
 
 int main()
 {
-    char *msg;
+    char msg[1000];
     int shift;
     scanf("%s", msg);
     scanf("%d", &shift);

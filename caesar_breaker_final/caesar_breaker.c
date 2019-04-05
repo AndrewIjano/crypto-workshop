@@ -35,7 +35,7 @@ void brute_force(char *msg)
 
 int main()
 {
-    char *msg;
+    char msg[10000]
     int shift;
     scanf("%s", msg);
     brute_force(msg);
