@@ -68,7 +68,7 @@ def substitute(text, alphabet):
 
 def print_help():
     print("Usage:")
-    print("python3", sys.argv[0], "substitution -i [document] -a [alphabet] [--reversed]")
+    print("python3", sys.argv[0], "substitution -i [document] -a [alphabet]")
     print("python3", sys.argv[0], "analysis [options] -i [document]")
     print("Options:")
     print("-p                   plot the frequency graph (default: disabled)")

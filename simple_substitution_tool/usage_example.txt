@@ -1,0 +1,7 @@
+Usage Example:
+
+python3 simple_substitution.py substitution -i plaintext.txt -a alphabet.txt
+
+python3 simple_substitution.py analysis -p -i ciphertext.txt
+
+
