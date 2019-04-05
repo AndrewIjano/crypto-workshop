@@ -4,12 +4,12 @@
 
 #define BASE (int)'A'
 
-char rot(int shift, char chr)
+char rotate(int shift, char chr)
 {
     if (!isalpha(chr))
         return chr;
 
-    return (toupper(chr) + shift - BASE) % 26 + BASE;
+    return ((int)toupper(chr) + shift - BASE) % 26 + BASE;
 }
 
 char *encode(int shift, char *msg)
@@ -17,7 +17,7 @@ char *encode(int shift, char *msg)
     char *cipher_msg = strdup(msg);
 
     for (int i = 0; i < strlen(msg); i++)
-        cipher_msg[i] = rot(shift, cipher_msg[i]);
+        cipher_msg[i] = rotate(shift, cipher_msg[i]);
 
     return cipher_msg;
 }

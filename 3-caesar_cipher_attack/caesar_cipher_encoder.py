@@ -1,0 +1,1 @@
+print('Ciphertext:', (lambda x : (lambda f: ["".join(chr((ord(c) + i - f) % (ord('Z') - f + 1) + f) if c.isalpha() else c for c in x) for i in range(ord('Y') - f + 2)][ord('E') - f - 1])(ord('A')))(input("Enter the plaintext: ").upper()))

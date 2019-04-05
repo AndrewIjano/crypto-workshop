@@ -4,12 +4,12 @@
 
 #define BASE (int)'A'
 
-char rot(int shift, char chr)
+char rotate(int shift, char chr)
 {
     if (!isalpha(chr))
         return chr;
 
-    return (toupper(chr) + shift - BASE) % 26 + BASE;
+    return ((int)toupper(chr) + shift - BASE) % 26 + BASE;
 }
 
 char *encode(int shift, char *msg)

@@ -64,7 +64,7 @@ def substitute(text, alphabet):
         chr(BASE + i): chr(BASE + i).lower() if alphabet[i] == "-" else alphabet[i].upper()
         for i in range(len(alphabet))
         }
-    return "".join([alpha_dict[c] if c.isalpha() else c for c in text.upper()])
+    return "".join(alpha_dict[c] if c.isalpha() else c for c in text.upper())
 
 def print_help():
     print("Usage:")

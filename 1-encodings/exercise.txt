@@ -1,0 +1,7 @@
+1 - 80 82 65 84 79 de decimal para ASCII
+
+
+2 - GREGO de ASCII para decimal
+
+
+Referência: https://wiki.imesec.ime.usp.br/books/ctf-starter-pack/page/c%C3%B3digo-ascii

@@ -1,0 +1,12 @@
+1 - plaintext = PRATO, shift = 3
+ciphertext = 
+
+2 - plaintext = MANGA, shift = 18
+ciphertext = 
+
+3 - plaintext = GREGO, shift = 13
+ciphertext = 
+
+4 - plaintext = YJWYG, shift = 13
+ciphertext = 
+
