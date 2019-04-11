@@ -33,6 +33,6 @@ int main()
     scanf("%s", msg);
     scanf("%d", &shift);
 
-    printf("%s", encode(msg, shift));
+    printf("%s", encode(shift, msg));
     return 0;
 }
