@@ -1,4 +1,5 @@
 import sys
+
 BASE = ord('A')
 
 def rotate(char, shift):
