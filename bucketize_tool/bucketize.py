@@ -17,5 +17,5 @@ if __name__ == '__main__':
         with open(sys.argv[1], 'r') as textfile:
             buckets = bucketize(textfile.read(), int(sys.argv[2]))
             for i in range(len(buckets)):
-                with open(f'bucket_{i}.txt', 'w+') as bucket:
+                with open('bucket_{' + str(i) + '}.txt', 'w+') as bucket:
                     bucket.write(buckets[i])     
