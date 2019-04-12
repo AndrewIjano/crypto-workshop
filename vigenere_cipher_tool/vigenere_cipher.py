@@ -1,4 +1,5 @@
 import sys
+from argparse import ArgumentParser, FileType
 
 BASE = ord('A')
 
@@ -24,9 +25,28 @@ def vigenere_decoder(ciphertext, key):
     return vigenere_encoder(ciphertext, reverse_key)
 
 if __name__ == '__main__':
-    if len(sys.argv) < 3:
-        print('Usage: python3 vigenere_cipher.py plaintext key')
-        print('Example:\n python3 vigenere_cipher.py plaintext.txt "SENHA"')
+    # if len(sys.argv) < 3:
+    #     print('Usage: python3 vigenere_cipher.py plaintext key')
+    #     print('Example:\n python3 vigenere_cipher.py plaintext.txt "SENHA"')
+    # else:
+    #     with open(sys.argv[1], 'r') as textfile:
+    #         print(vigenere_encoder(textfile.read(), sys.argv[2]))
+    parser = ArgumentParser(
+        prog='vigenere_cipher.py',
+        epilog='''
+            Example:\n
+            python3 vigenere_cipher.py plaintext.txt "SENHA"
+            ''')
+    parser.add_argument(
+        'textfile', metavar='textfile', nargs=1, help='the input textfile', type=FileType('r'))
+    parser.add_argument(
+        'key', metavar='key', nargs=1, help='the key used to encrypt the plaintext', type=str)
+    parser.add_argument(
+        '-d', nargs='?', dest='decode', help='flag to decode the textfile',
+        const=True, default=False)
+    args = parser.parse_args()
+
+    if args.decode:
+        print(vigenere_decoder(args.textfile[0].read(), args.key[0]))
     else:
-        with open(sys.argv[1], 'r') as textfile:
-            print(vigenere_encoder(textfile.read(), sys.argv[2]))
+        print(vigenere_encoder(args.textfile[0].read(), args.key[0]))

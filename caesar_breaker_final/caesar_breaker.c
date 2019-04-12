@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 #define BASE (int)'A'
+#define SIZE_MSG 10000
 
 char rotate(int shift, char chr)
 {
@@ -35,9 +37,9 @@ void brute_force(char *msg)
 
 int main()
 {
-    char msg[10000]
-    int shift;
-    scanf("%s", msg);
+    char *msg = NULL;
+    size_t msg_size = SIZE_MSG;
+    getline(&msg, &msg_size, stdin);
     brute_force(msg);
     return 0;
 }

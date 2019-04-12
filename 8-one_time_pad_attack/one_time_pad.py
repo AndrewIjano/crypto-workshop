@@ -13,7 +13,7 @@ def encoder(plaintext):
     random.seed(BASE - 66)
     for char in plaintext:
         if char.isalpha():
-            ciphertext += rotate(char, (random.randint(0, 26) + BASE))
+            ciphertext += rotate(char, (random.randint(0, 25) + BASE))
         else:
             ciphertext += char
     return ciphertext
